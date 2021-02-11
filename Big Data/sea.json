@@ -1,0 +1,5 @@
+{
+  "Food": ["Blue Crab", "Catfish", "Clams", "Cod", "Flounder", "Haddock", "Halibut", "Lobster", "Ocean Perch", "Orange Roughy", "Oysters", "Pollock", "Rainbow Trout", "Rockfish", "Salmon", "Pink Salmon", "Scallops", "Shrimp", "Swordfish", "Tilapia", "Tuna"],
+  "Calories": [100, 130, 110, 90, 100, 100, 120, 80, 110, 80, 100, 90, 140, 110, 200, 130, 140, 100, 120, 110, 130],
+  "colorss": ["#42B6C3", "#1D87BB", "#33A7C2", "#5BBFC0", "#42B6C3", "#42B6C3", "#2498C0", "#74C8BC", "#33A7C2", "#74C8BC", "#42B6C3", "#5BBFC0", "#1F73B1", "#33A7C2", "#081D58", "#1D87BB", "#1F73B1", "#42B6C3", "#2498C0", "#33A7C2", "#1D87BB"]
+}

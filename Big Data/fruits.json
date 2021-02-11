@@ -1,0 +1,5 @@
+{
+  "Food": ["Apple", "Avocado", "Banana", "Cantaloupe", "Grapefruit", "Grapes", "Honeydew Melon", "Kiwifruit", "Lemon", "Lime", "Nectarine", "Orange", "Peach", "Pear", "Pineapple", "Plums", "Strawberries", "Sweet Cherries", "Tangerine", "Watermelon"],
+  "Calories": [130, 50, 110, 50, 60, 90, 50, 90, 15, 20, 60, 80, 60, 100, 50, 70, 50, 100, 50, 80],
+  "colorsf": ["#E66910", "#FEE392", "#F78920", "#FEE392", "#FED778", "#FEAB39", "#FEE392", "#FEAB39", "#FFFACD", "#FFF8C5", "#FED778", "#FEBC48", "#FED778", "#FE9929", "#FEE392", "#FECB5D", "#FEE392", "#FE9929", "#FEE392", "#FEBC48"]
+}

@@ -1,0 +1,5 @@
+{
+  "Food": ["Asparagus", "Bell Pepper", "Broccoli", "Carrot", "Cauliflower", "Celery", "Cucumber", "Green (Snap) Beans", "Green Cabbage", "Green Onion", "Iceberg Lettuce", "Leaf Lettuce", "Mushrooms", "Onion", "Potato", "Radishes", "Summer Squash", "Sweet Corn", "Sweet Potato", "Tomato"],
+  "Calories": [20, 25, 45, 30, 25, 15, 10, 20, 25, 10, 10, 15, 20, 45, 110, 10, 20, 90, 100, 25],
+  "colorsv": ["#F8FCC3", "#F7FCBA", "#DFF2A8", "#F2FAB5", "#F7FCBA", "#FAFDCC", "#FCFDD5", "#F8FCC3", "#F7FCBA", "#FCFDD5", "#FCFDD5", "#FAFDCC", "#F8FCC3", "#DFF2A8", "#62BB6E", "#FCFDD5", "#F8FCC3", "#8ECF81", "#79C679", "#F7FCBA"]
+}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <title>Document3</title>
+</head>
+<style>
+    body{
+        background-color: wheat;
+    }
+    
+</style>
+
+
+<body>
+
+    <div id="myDiv"></div>
+    <div id="myDiv2"></div>
+    <div id="myDiv3"></div>
+    <div id="myDiv4"></div>
+
+    <button onclick="alert('Welcome to my page!')">Click me</button>
+    <button type="button"
+onclick="document.getElementById('date_time_button').innerHTML = Date()">
+Click and see Date and Time.</button>
+
+<p id="date_time_button"></p>
+
+
+  <script> 
+
+var nutrient = {
+  "Food": ["Asparagus", "Bell Pepper", "Broccoli", "Carrot", "Cauliflower", "Celery", "Cucumber", "Green (Snap) Beans", "Green Cabbage", "Green Onion", "Iceberg Lettuce", "Leaf Lettuce", "Mushrooms", "Onion", "Potato", "Radishes", "Summer Squash", "Sweet Corn", "Sweet Potato", "Tomato", "Avocado", "Apple", "Banana", "Cantaloupe", "Grapefruit", "Grapes", "Honeydew Melon", "Kiwifruit", "Lemon", "Lime", "Nectarine", "Orange", "Peach", "Pear", "Pineapple", "Plums", "Strawberries", "Sweet Cherries", "Tangerine", "Watermelon", "Blue Crab", "Catfish", "Clams", "Cod", "Flounder", "Haddock", "Halibut", "Lobster", "Ocean Perch", "Orange Roughy", "Oysters", "Pollock", "Rainbow Trout", "Rockfish", "Salmon", "Pink Salmon", "Scallops", "Shrimp", "Swordfish", "Tilapia", "Tuna"],
+  "calories": [20, 25, 45, 30, 25, 15, 10, 20, 25, 10, 10, 15, 20, 45, 110, 10, 20, 90, 100, 25, 50, 130, 110, 50, 60, 90, 50, 90, 15, 20, 60, 80, 60, 100, 50, 70, 50, 100, 50, 80, 100, 130, 110, 90, 100, 100, 120, 80, 110, 80, 100, 90, 140, 110, 200, 130, 140, 100, 120, 110, 130],
+  "colors": ["#FDC690", "#FCB17B", "#DA3724", "#FC935E", "#FCB17B", "#FDD6A3", "#FDE4BF", "#FDC690", "#FCB17B", "#FDE4BF", "#FDE4BF", "#FDD6A3", "#FDC690", "#DA3724", null, "#FDE4BF", "#FDC690", null, null, "#FCB17B", null, "#C3160E", null, "#C3160E", "#850000", null, "#C3160E", null, "#FDD6A3", "#FDC690", "#850000", null, "#850000", null, "#C3160E", null, "#C3160E", null, "#C3160E", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+}
+
+var vegs = {
+    "Food": ["Asparagus", "Bell Pepper", "Broccoli", "Carrot", "Cauliflower", "Celery", "Cucumber", "Green (Snap) Beans", "Green Cabbage", "Green Onion", "Iceberg Lettuce", "Leaf Lettuce", "Mushrooms", "Onion", "Potato", "Radishes", "Summer Squash", "Sweet Corn", "Sweet Potato", "Tomato"],
+  "Calories": [20, 25, 45, 30, 25, 15, 10, 20, 25, 10, 10, 15, 20, 45, 110, 10, 20, 90, 100, 25],
+  "colorsv": ["#F8FCC3", "#F7FCBA", "#DFF2A8", "#F2FAB5", "#F7FCBA", "#FAFDCC", "#FCFDD5", "#F8FCC3", "#F7FCBA", "#FCFDD5", "#FCFDD5", "#FAFDCC", "#F8FCC3", "#DFF2A8", "#62BB6E", "#FCFDD5", "#F8FCC3", "#8ECF81", "#79C679", "#F7FCBA"]
+}
+
+var fruit = {
+    "Food": ["Apple", "Avocado", "Banana", "Cantaloupe", "Grapefruit", "Grapes", "Honeydew Melon", "Kiwifruit", "Lemon", "Lime", "Nectarine", "Orange", "Peach", "Pear", "Pineapple", "Plums", "Strawberries", "Sweet Cherries", "Tangerine", "Watermelon"],
+  "Calories": [130, 50, 110, 50, 60, 90, 50, 90, 15, 20, 60, 80, 60, 100, 50, 70, 50, 100, 50, 80],
+  "colorsf": ["#E66910", "#FEE392", "#F78920", "#FEE392", "#FED778", "#FEAB39", "#FEE392", "#FEAB39", "#FFFACD", "#FFF8C5", "#FED778", "#FEBC48", "#FED778", "#FE9929", "#FEE392", "#FECB5D", "#FEE392", "#FE9929", "#FEE392", "#FEBC48"]
+}
+
+var sea = {
+    "Food": ["Blue Crab", "Catfish", "Clams", "Cod", "Flounder", "Haddock", "Halibut", "Lobster", "Ocean Perch", "Orange Roughy", "Oysters", "Pollock", "Rainbow Trout", "Rockfish", "Salmon", "Pink Salmon", "Scallops", "Shrimp", "Swordfish", "Tilapia", "Tuna"],
+  "Calories": [100, 130, 110, 90, 100, 100, 120, 80, 110, 80, 100, 90, 140, 110, 200, 130, 140, 100, 120, 110, 130],
+  "colorss": ["#42B6C3", "#1D87BB", "#33A7C2", "#5BBFC0", "#42B6C3", "#42B6C3", "#2498C0", "#74C8BC", "#33A7C2", "#74C8BC", "#42B6C3", "#5BBFC0", "#1F73B1", "#33A7C2", "#081D58", "#1D87BB", "#1F73B1", "#42B6C3", "#2498C0", "#33A7C2", "#1D87BB"]
+}
+         var trace = {
+            x: nutrient.Food,
+            y: nutrient.calories,
+            mode: 'markers',
+            type: 'bar',
+            marker: {
+                color:nutrient.colors
+            },    
+        };
+ 
+        var trace2 = {
+            x: vegs.Food,
+            y: vegs.Calories,
+            mode: 'markers',
+            type: 'bar',
+            marker: {
+                color:vegs.colorsv
+            },    
+        };
+
+        var trace3 = {
+            x: fruit.Food,
+            y: fruit.Calories,
+            mode: 'markers',
+            type: 'bar',
+            marker: {
+                color:fruit.colorsf
+            },    
+        };
+
+        var trace4 = {
+            x: sea.Food,
+            y: sea.Calories,
+            mode: 'markers',
+            type: 'bar',
+            marker: {
+                color:sea.colorss
+            },    
+        };
+
+
+
+        var data = [trace];
+        var data2 = [trace2];
+        var data3 = [trace3];
+        var data4 = [trace4];
+
+    var alleats = Plotly.newPlot('myDiv', data)
+    
+    var vegs = Plotly.newPlot('myDiv2', data2)
+
+    var fruits = Plotly.newPlot('myDiv3', data3)
+
+    var meats = Plotly.newPlot('myDiv4', data4)
+//    data[0] = trace;
+//Plotly.newPlot('myDiv2', data)
+
+   //Graphfunction = function(){
+     //   if 
+   //}
+
+  
+    </script>
+</body>
+</html>
