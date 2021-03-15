@@ -24,8 +24,9 @@
 
 <body>
     <h3 id="Year">Year</h3>
-    <input type="range" name="year" min="1817" max="2012" oninput="moveSlider(this.value)">
+    <input id="slider" type="range" value="1817" name="year" min="1817" max="2012" oninput="moveSlider(this.value)">
     <button onclick='geojson.setstyle({color: black})'>click</button>
+    
 <div id="map">Hello</div>   
 
 <script>
@@ -88,20 +89,40 @@ var earth = {
 	}).addTo(map);
 
 
-    var geojson = L.geoJSON(earth).addTo(map)
 
+   // var geojson = L.geoJSON(earth).addTo(map)
+var markerArray = []
     var current = 1817;
     function moveSlider(value) {
         console.log(value)
         document.getElementById('Year').innerHTML = 'Year: ' + value
         current = value
+        myMarker(value)
+    }
+function myMarker(year){
+for (i=0;i<markerArray.length;i++){markerArray[i].remove()}
+markerArray=[]
+for (i=0;i<earth.features.length;i++){
+
+    if (earth.features[i].properties.yr<year){
+    
+    var lat = earth.features[i].geometry.coordinates[1]
+    var lon = earth.features[i].geometry.coordinates[0]
+
+    var myColor = "green"
+    if (earth.features[i].properties.Mag>4){myColor="red"}
+    if (earth.features[i].properties.Mag>4.5){myColor="blue"}
+    markerArray.push(L.circle([lat,lon], {color:myColor,radius:earth.features[i].properties.Mag*10000}).addTo(map))
     }
 
-    //function slider () {
+}}
    // L.geoJSON(earth).yr(current).addTo(map)
-    console.log(L.geoJSON(earth).yr)
+ //  console.log(L.geoJSON(earth).yr)
     
-    moveSlider("1817")
+ moveSlider("1817")
+document.getElementById('slider').value="1817"
+//map._panes.shadowPane.remove()
+
 </script>
 </body>
 </html>
